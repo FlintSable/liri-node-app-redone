@@ -5,7 +5,7 @@ var fs = require("fs");
 var chalk = require('chalk');
 
 
-exports.movieThis = function(movieQuery){
+exports.omdbSearch = function(movieQuery){
         queryUrl = "http://www.omdbapi.com/?t=" + movieQuery + "&plot=short";
         request.get(queryUrl, (err, response, movie) =>{
         movie = JSON.parse(movie);

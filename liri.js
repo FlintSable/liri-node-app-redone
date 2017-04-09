@@ -1,7 +1,7 @@
-var myweets = require('./parts/my-tweets');
-var spotify = require('./parts/spotify-this-song.js');
-var movie = require('./parts/movie-this');
-var dowhata = require('./parts/do-what-it-says');
+var tweets = require('./k/parts/my-tweets');
+var spotify = require('./k/parts/spotify-this-song.js');
+var movie = require('./k/parts/movie-this');
+var dowhata = require('./k/parts/do-what-it-says');
 
 
 
@@ -12,9 +12,10 @@ mainer();
 
 function mainer() {
     var indexCount = process.argv.slice(2);
-    var input = indexCount.join(' ');
+    var input = indexCount[0];
+    var arguments = indexCount.slice(1, indexCount.length).join(' ');
     var inputCountLen = indexCount.length;
-    console.log(inputCountLen);
+    console.log(input + '~');
 
     if (inputCountLen === 0) {
         console.log('no arguments passed');
@@ -22,15 +23,14 @@ function mainer() {
         switch (input) {
             case 'my-tweets':
                 console.log('mytweetssss');
-                // call the tweets
+                tweets.pull();
                 break;
             case 'movie-this':
-                console.log('movie-thisssss');
-                // call the movie
+				movie.omdbSearch(arguments);
                 break;
             case 'spotify-this-song':
                 console.log('spotify-this-songgggggg');
-                // call the spot
+                console.log(arguments);
                 break;
             case 'do-what-it-says':
                 console.log('do whataaaaaa');
@@ -40,9 +40,6 @@ function mainer() {
 
     }
 
-
-
-
 }
 
 
@@ -51,6 +48,5 @@ function mainer() {
 
 
 
-// movie.omdbSearch('stranger than fiction');
 
 // console.log(newMovieSearch);
