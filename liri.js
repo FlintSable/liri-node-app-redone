@@ -1,5 +1,5 @@
 var tweets = require('./k/parts/my-tweets');
-var spotify = require('./k/parts/spotify-this-song.js');
+var spotify = require('./k/parts/spotify-this-song');
 var movie = require('./k/parts/movie-this');
 var dowhata = require('./k/parts/do-what-it-says');
 
@@ -26,11 +26,16 @@ function mainer() {
                 tweets.pull();
                 break;
             case 'movie-this':
-				movie.omdbSearch(arguments);
+                movie.omdbSearch(arguments);
                 break;
             case 'spotify-this-song':
-                console.log('spotify-this-songgggggg');
-                console.log(arguments);
+                // if (inputs.length === 2) {
+                //     var defaultInput = new SearchConstructor('track', 'Ace of Base');
+                //     songSearch(defaultInput);
+                // } else if (songQuery.length > 0) {
+                //     var userInput = new SearchConstructor('track', songQuery);
+                //     songSearch(userInput);
+                // }
                 break;
             case 'do-what-it-says':
                 console.log('do whataaaaaa');

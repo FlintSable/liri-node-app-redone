@@ -1,3 +1,5 @@
+'use strict';
+
 // var weather = require('weather-js');
 var inquirer = require('inquirer');
 const request = require('request');
@@ -7,9 +9,9 @@ var logger = require('./logger.js');
 
 
 exports.omdbSearch = function(movieQuery){
-        queryUrl = "http://www.omdbapi.com/?t=" + movieQuery + "&plot=short";
+        var queryUrl = "http://www.omdbapi.com/?t=" + movieQuery + "&plot=short";
         request.get(queryUrl, (err, response, movie) =>{
-        movie = JSON.parse(movie);
+        var movie = JSON.parse(movie);
         var output =    '~~~~~~~~~~~~~~~' + '\n' + 
                         '* ' + movie.Title + '\n' +
                         '* ' + movie.Year + '\n' +
