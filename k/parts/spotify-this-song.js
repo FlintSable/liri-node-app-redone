@@ -5,14 +5,14 @@ var confirm = require('inquirer-confirm');
 
 
 
-var SeachConstructor = function(arg1, arg2) {
+exports.SearchConstructor = function(arg1, arg2) {
     this.type = arg1;
     this.query = arg2;
 };
 
 
 exports.spotSong = function(searchObj) {
-    spotify.search('sunshines gone', function(err, data) {
+    spotify.search(searchObj, function(err, data) {
         console.log(searchObj);
         if (err) {
             console.log('Error occurred: ' + err);

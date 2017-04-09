@@ -29,13 +29,13 @@ function mainer() {
                 movie.omdbSearch(arguments);
                 break;
             case 'spotify-this-song':
-                // if (inputs.length === 2) {
-                //     var defaultInput = new SearchConstructor('track', 'Ace of Base');
-                //     songSearch(defaultInput);
-                // } else if (songQuery.length > 0) {
-                //     var userInput = new SearchConstructor('track', songQuery);
-                //     songSearch(userInput);
-                // }
+                if (inputCountLen === 1) {
+                    var defaultInput = new spotify.SearchConstructor('track', 'Ace of Base');
+                    spotify.spotSong(defaultInput);
+                } else if (inputCountLen > 1) {
+                    var userInput = new spotify.SearchConstructor('track', arguments);
+                    spotify.spotSong(userInput);
+                }
                 break;
             case 'do-what-it-says':
                 console.log('do whataaaaaa');
