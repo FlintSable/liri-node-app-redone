@@ -3,6 +3,7 @@ var inquirer = require('inquirer');
 const request = require('request');
 var fs = require("fs");
 var chalk = require('chalk');
+var logger = require('./logger.js');
 
 
 exports.omdbSearch = function(movieQuery){
@@ -19,6 +20,7 @@ exports.omdbSearch = function(movieQuery){
                         '* ' + movie.Actors + '\n' + 
                         '~~~~~~~~~~~~~~~';
         console.log(chalk.blue.bgWhite(output));
+        logger.logger(output);
  
         
         });
