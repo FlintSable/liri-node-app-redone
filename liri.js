@@ -25,7 +25,7 @@ function mainer() {
                 tweets.pull();
                 break;
             case 'movie-this':
-                movie.omdbSearch(arguments);
+                movie.omdbSearch(arguments='amalie');
                 break;
             case 'spotify-this-song':
                 if (inputCountLen === 1) {
