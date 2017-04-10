@@ -17,11 +17,13 @@
 - npm
 - node 
 - chalk
+- Spotify API
+- Twitter API
+- OMDB API
 
 ## Code Explaination
-- my-tweets accesses and displays 20 of my last tweets
+- my-tweets will accesses and displays 20 of my last tweets
 - spotify-this-song will return a seach of you choice and prompt for a sample
 - movie-this will return the movie you have searched
-- movie searches go to a log file
-
+- requests get logged to log.log in the k folder in log folder
 
