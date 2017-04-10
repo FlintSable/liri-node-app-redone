@@ -30,7 +30,7 @@ function mainer() {
                 break;
             case 'spotify-this-song':
                 if (inputCountLen === 1) {
-                    var defaultInput = new spotify.SearchConstructor('track', 'Ace of Base');
+                    var defaultInput = new spotify.SearchConstructor('track', 'Lumos!');
                     spotify.spotSong(defaultInput);
                 } else if (inputCountLen > 1) {
                     var userInput = new spotify.SearchConstructor('track', arguments);
