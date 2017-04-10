@@ -26,4 +26,4 @@
 - spotify-this-song will return a seach of you choice and prompt for a sample
 - movie-this will return the movie you have searched
 - requests get logged to log.log in the k folder in log folder
-
+- liri.js is the entry file, using request module the functions for searches are imported into liri.js. 
