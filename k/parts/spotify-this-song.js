@@ -2,6 +2,8 @@ const spotify = require('spotify');
 var browser = require('child_process');
 var os = require('os');
 var confirm = require('inquirer-confirm');
+var logger = require('./logger.js');
+
 
 
 
@@ -16,13 +18,15 @@ exports.spotSong = function(searchObj) {
         console.log(searchObj);
         if (err) {
             console.log('Error occurred: ' + err);
+            logger.logger('Error occurred' + err);
             return;
         } else if (!err) {
-            console.log(data);
-            console.log('Artist: ' + data.tracks.items[0].artists[0].name + '\n' +
-                'Song Name: ' + data.tracks.items[0].name + '\n' +
-                'Album Name: ' + data.tracks.items[0].album.name + '\n'
-            );
+            var output = ('\n' + '\n' +
+                        'Artist: ' + data.tracks.items[0].artists[0].name + '\n' +
+                        'Song Name: ' + data.tracks.items[0].name + '\n' +
+                        'Album Name: ' + data.tracks.items[0].album.name + '\n');
+            // console.log(output);
+            logger.logger(output);
 
             // ask user if they would like to sample the song
             confirm('Would you like to hear a sample?').then(function confirmed() {
@@ -36,6 +40,7 @@ exports.spotSong = function(searchObj) {
                 }
             }, function canceled() {
                 console.log('Preview Url: ' + data.tracks.items[0].preview_url);
+                logger.logger('Preview Url: ' + data.tracks.items[0].preview_url);
             });
 
         }

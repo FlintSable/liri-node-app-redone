@@ -15,7 +15,7 @@ exports.omdbSearch = function(movieQuery){
         var output =    '~~~~~~~~~~~~~~~' + '\n' + 
                         '* ' + movie.Title + '\n' +
                         '* ' + movie.Year + '\n' +
-                        '* ' + movie.Imdbraiting + '\n' + 
+                        '* ' + movie.imdbRating + '\n' + 
                         '* ' + movie.Country + '\n' + 
                         '* ' + movie.Language + '\n' + 
                         '* ' + movie.Plot + '\n' + 

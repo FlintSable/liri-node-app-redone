@@ -1,7 +1,7 @@
 var tweets = require('./k/parts/my-tweets');
 var spotify = require('./k/parts/spotify-this-song');
 var movie = require('./k/parts/movie-this');
-var dowhata = require('./k/parts/do-what-it-says');
+var dew = require('./k/parts/do-what-it-says');
 
 
 
@@ -22,7 +22,6 @@ function mainer() {
     } else if (inputCountLen > 0) {
         switch (input) {
             case 'my-tweets':
-                console.log('mytweetssss');
                 tweets.pull();
                 break;
             case 'movie-this':
@@ -38,8 +37,7 @@ function mainer() {
                 }
                 break;
             case 'do-what-it-says':
-                console.log('do whataaaaaa');
-                // call the dew
+            	dew.says();
                 break;
         }
 
