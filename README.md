@@ -21,9 +21,13 @@
 - Twitter API
 - OMDB API
 
+![Alt text](/k/parts/folders.png?raw=true "folders")
+
 ## Code Explaination
 - my-tweets will accesses and displays 20 of my last tweets
 - spotify-this-song will return a seach of you choice and prompt for a sample
 - movie-this will return the movie you have searched
 - requests get logged to log.log in the k folder in log folder
-- liri.js is the entry file, using request module the functions for searches are imported into liri.js. 
+- liri.js is the entry file, using request module the functions for searches are imported into liri.js.
+
+
